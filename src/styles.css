@@ -1,0 +1,187 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: rgb(0, 137, 132);
+  padding: 0;
+  margin-top: 60px;
+  background-color: #f6f7f7;
+
+  
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  
+}
+.descripcion{
+  font-size: 11px;
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la lista de notas */
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.nota-importante{
+  color: #919191;
+  font-size: 10px;
+}
+/* Estilos de cada nota */
+.note {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  transform: scale(1.05) rotate(-2deg);
+  
+}
+
+.note:hover{
+  transform: scale(1.50) ;/* Escala y rotación en hover */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+.note.important {
+  background-color: #a72c2c;
+  border-color: rgb(94, 94, 94);
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 200px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-shadow: 0px 0px 10px 2px;
+  transform:  rotate(+2deg);
+
+}
+
+.note.important:hover{
+  transform: scale(1.50);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+.note h3 {
+  margin-top: 0;
+  padding: 2px;
+  
+}
+
+/* Estilos del formulario */
+.form-label {
+  display: flex;
+  flex-direction:column;
+  align-items: left;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(0, 137, 132);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: rgb(94, 94, 94);
+  color: rgb(250, 252, 252);
+}
+
+.nota-importante{
+  color: #919191;
+  font-size: 10px;
+}
+
+/* Media query para dispositivos con un ancho de pantalla de hasta 767px (pequeñas pantallas de teléfonos) */
+@media screen and (max-width: 767px) {
+  .note {
+    align-items: center;
+    justify-self: center;
+  }
+  .note-list {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 10px; /* Espacio entre las columnas */
+    
+    
+  }
+}
+
+
+/*media querys*/
+/*(tablets y pantallas pequeñas de dispositivos móviles) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .note {
+    align-items: center;
+    justify-self: center;
+  }
+  .note-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+  }
+}
+
+/*(pantallas de escritorio y tablets en orientación horizontal) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .note {
+    align-items: center;
+    justify-self: center;
+  }
+  .note-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 10px; 
+    
+  }
+}
+
+/* (pantallas de escritorio con tamaños mayores) */
+@media screen and (min-width: 1200px) {
+  .note {
+    align-items: center;
+    justify-self: center;
+  }
+  .note-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 20px; 
+  
+  }
+}
